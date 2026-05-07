@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpareXpress - Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="bootingLogo">
+        <img src="images/redcar.gif" alt="Loading..." />
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Find-Part.html" class="active">Search</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact Us.html">Contact</a></li>
+        </ul>
+        <div class="nav-button">
+            <button id="accountButton"> <i class="fa-solid fa-user"></i> &nbsp; My Account</button>
+        </div>   
+    </nav>
+    <header>
+        <div class="header-container">
+            <div class="header-container-center">
+                Find <span>Part</span>
+                <p>Search Your Ideal Spare with Ease!</p>
+            </div>
+        </div>
+    </header>
+    <div class="title">
+        Select the Manufacture
+        <hr>
+        <ul class="catogaries">
+            <li><span class="active" onclick="filterCards('all'); setActiveCategory(this);">All</span></li>
+            <li><span onclick="filterCards('asian'); setActiveCategory(this);">Asian</span></li>
+            <li><span onclick="filterCards('european'); setActiveCategory(this);">European</span></li>
+            <li><span onclick="filterCards('american'); setActiveCategory(this);">American</span></li>
+        </ul>
+    </div>
+
+    <!-- Set 01-->
+    <div class="card-container">
+        
+        <div class="card" data-category="asian" onclick="navigateTo('b-Toyota.html')">
+            <img src="images/brands/toyota.png" alt="brand-logo" class="car-logo">
+            <h2>Toyota</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/japan.jpg" alt="m-country" class="flag">
+                    <span>Japan</span>
+                </div>
+                <div class="divider"></div>
+                <span>13 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian" onclick="navigateTo('b-Honda.html')">
+            <img src="images/brands/honda.png" alt="brand-logo" class="car-logo">
+            <h2>Honda</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/japan.jpg" alt="m-country" class="flag">
+                    <span>Japan</span>
+                </div>
+                <div class="divider"></div>
+                <span>10 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian" onclick="navigateTo('b-nissan.html')">
+            <img src="images/brands/nissan.png" alt="brand-logo" class="car-logo">
+            <h2>Nissan</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/japan.jpg" alt="m-country" class="flag">
+                    <span>Japan</span>
+                </div>
+                <div class="divider"></div>
+                <span>07 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="european" onclick="navigateTo('b-volkswagon.html')">
+            <img src="images/brands/Volkswagen.png" alt="brand-logo" class="car-logo">
+            <h2>Volkswagen</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/germany.png" alt="m-country" class="flag">
+                    <span>Germany</span>
+                </div>
+                <div class="divider"></div>
+                <span>06 Models</span>
+            </div>
+        </div>
+  
+
+    <!-- Set 02-->
+
+        <div class="card" data-category="american" onclick="navigateTo('b-jeep.html')">
+            <img src="images/brands/jeep.png" alt="brand-logo" class="car-logo">
+            <h2>Jeep</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/usa.png" alt="m-country" class="flag">
+                    <span>USA</span>
+                </div>
+                <div class="divider"></div>
+                <span>03 Models</span>
+            </div>
+        </div>
+
+
+        <div class="card" data-category="european" onclick="navigateTo('b-bmw.html')">
+            <img src="images/brands/bmw.png" alt="brand-logo" class="car-logo">
+            <h2>BMW</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/germany.png" alt="m-country" class="flag">
+                    <span>Germany</span>
+                </div>
+                <div class="divider"></div>
+                <span>05 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian" onclick="navigateTo('b-mitsubishi.html')">
+            <img src="images/brands/mitsubishi.png" alt="brand-logo" class="car-logo">
+            <h2>Mitsubishi</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/japan.jpg" alt="m-country" class="flag">
+                    <span>Japan</span>
+                </div>
+                <div class="divider"></div>
+                <span>06 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="european" onclick="navigateTo('b-benze.html')">
+            <img src="images/brands/mercedes-logo.png" alt="brand-logo" class="car-logo">
+            <h2>Mercedes-Benz</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/germany.png" alt="m-country" class="flag">
+                    <span>Germany</span>
+                </div>
+                <div class="divider"></div>
+                <span>06 Models</span>
+            </div>
+        </div>
+
+  
+
+
+    <!-- Set 03-->
+        
+        <div class="card" data-category="asian">
+            <img src="images/brands/kia.png" alt="brand-logo" class="car-logo">
+            <h2>Kia</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/s.korea.jpg" alt="m-country" class="flag">
+                    <span>South Korea</span>
+                </div>
+                <div class="divider"></div>
+                <span>06 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/tata.png" alt="brand-logo" class="car-logo">
+            <h2>Tata Motors</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/india.png" alt="m-country" class="flag">
+                    <span>India</span>
+                </div>
+                <div class="divider"></div>
+                <span>05 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/mahindra.png" alt="brand-logo" class="car-logo">
+            <h2>Mahindra</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/india.png" alt="m-country" class="flag">
+                    <span>India</span>
+                </div>
+                <div class="divider"></div>
+                <span>04 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/maruti-suzuki.png" alt="brand-logo" class="car-logo">
+            <h2>Maruti Suzuki</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/india.png" alt="m-country" class="flag">
+                    <span>India</span>
+                </div>
+                <div class="divider"></div>
+                <span>05 Models</span>
+            </div>
+        </div>
+  
+
+    <!-- Set 04-->
+        
+        <div class="card" data-category="asian">
+            <img src="images/brands/BYD.png" alt="brand-logo" class="car-logo">
+            <h2>BYD</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/china.png" alt="m-country" class="flag">
+                    <span>China</span>
+                </div>
+                <div class="divider"></div>
+                <span>02 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/geely.png" alt="brand-logo" class="car-logo">
+            <h2>Geely</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/china.png" alt="m-country" class="flag">
+                    <span>China</span>
+                </div>
+                <div class="divider"></div>
+                <span>04 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/suzuki.png" alt="brand-logo" class="car-logo">
+            <h2>Suzuki</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/japan.jpg" alt="m-country" class="flag">
+                    <span>Japan</span>
+                </div>
+                <div class="divider"></div>
+                <span>06 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/hyundai.png" alt="brand-logo" class="car-logo">
+            <h2>Hyundai</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/s.korea.jpg" alt="m-country" class="flag">
+                    <span>South Korea</span>
+                </div>
+                <div class="divider"></div>
+                <span>08 Models</span>
+            </div>
+        </div>
+
+
+
+    <!-- Set 05-->
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/mazda.png" alt="brand-logo" class="car-logo">
+            <h2>Mazda</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/japan.jpg" alt="m-country" class="flag">
+                    <span>Japan</span>
+                </div>
+                <div class="divider"></div>
+                <span>04 Models</span>
+            </div>
+        </div>
+        
+
+        <div class="card" data-category="european">
+            <img src="images/brands/audi.png" alt="brand-logo" class="car-logo">
+            <h2>Audi</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/germany.png" alt="m-country" class="flag">
+                    <span>Germany</span>
+                </div>
+                <div class="divider"></div>
+                <span>05 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="european">
+            <img src="images/brands/renault.png" alt="brand-logo" class="car-logo">
+            <h2>Renault</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/France.png" alt="m-country" class="flag">
+                    <span>France</span>
+                </div>
+                <div class="divider"></div>
+                <span>05 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="european">
+            <img src="images/brands/Peugeot.png" alt="brand-logo" class="car-logo">
+            <h2>Peugeot</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/France.png" alt="m-country" class="flag">
+                    <span>France</span>
+                </div>
+                <div class="divider"></div>
+                <span>04 Models</span>
+            </div>
+        </div>
+  
+
+    <!-- Set 06-->
+        
+        <div class="card" data-category="european">
+            <img src="images/brands/land-rover.png" alt="brand-logo" class="car-logo">
+            <h2>Land Rover</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/UK.png" alt="m-country" class="flag">
+                    <span>UK</span>
+                </div>
+                <div class="divider"></div>
+                <span>03 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="european">
+            <img src="images/brands/jaguar.png" alt="brand-logo" class="car-logo">
+            <h2>Jaguar</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/UK.png" alt="m-country" class="flag">
+                    <span>UK</span>
+                </div>
+                <div class="divider"></div>
+                <span>03 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="european">
+            <img src="images/brands/volvo.png" alt="brand-logo" class="car-logo">
+            <h2>Volvo</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/sweaden.png" alt="m-country" class="flag">
+                    <span>Sweden</span>
+                </div>
+                <div class="divider"></div>
+                <span>03 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="european">
+            <img src="images/brands/skoda.png" alt="brand-logo" class="car-logo">
+            <h2>Skoda</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/Czech_Republic.png" alt="m-country" class="flag">
+                    <span>Czech Rep.</span>
+                </div>
+                <div class="divider"></div>
+                <span>04 Models</span>
+            </div>
+        </div>
+  
+
+    <!-- Set 07-->
+        
+        <div class="card" data-category="european">
+            <img src="images/brands/fiat.png" alt="brand-logo" class="car-logo">
+            <h2>Fiat</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/italy.png" alt="m-country" class="flag">
+                    <span>Italy</span>
+                </div>
+                <div class="divider"></div>
+                <span>05 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/subaru.png" alt="brand-logo" class="car-logo">
+            <h2>Subaru</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/japan.jpg" alt="m-country" class="flag">
+                    <span>Japan</span>
+                </div>
+                <div class="divider"></div>
+                <span>04 Models</span>
+            </div>
+        </div>
+
+
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/MG.png" alt="brand-logo" class="car-logo">
+            <h2>MG</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/china.png" alt="m-country" class="flag">
+                    <span>China</span>
+                </div>
+                <div class="divider"></div>
+                <span>05 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="asian">
+            <img src="images/brands/Perodua.png" alt="brand-logo" class="car-logo">
+            <h2>Perodua</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/malaysia.png" alt="m-country" class="flag">
+                    <span>Malaysia</span>
+                </div>
+                <div class="divider"></div>
+                <span>03 Models</span>
+            </div>
+        </div>
+
+
+        <!-- Set 08-->
+        
+        <div class="card" data-category="european">
+            <img src="images/brands/mini.png" alt="brand-logo" class="car-logo">
+            <h2>Mini</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/UK.png" alt="m-country" class="flag">
+                    <span>UK</span>
+                </div>
+                <div class="divider"></div>
+                <span>05 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="american">
+            <img src="images/brands/tesla.png" alt="brand-logo" class="car-logo">
+            <h2>Tesla</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/usa.png" alt="m-country" class="flag">
+                    <span>USA</span>
+                </div>
+                <div class="divider"></div>
+                <span>04 Models</span>
+            </div>
+        </div>
+
+
+        <div class="card" data-category="american">
+            <img src="images/brands/chevrolet.png" alt="brand-logo" class="car-logo">
+            <h2>Chevrolet</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/usa.png" alt="m-country" class="flag">
+                    <span>USA</span>
+                </div>
+                <div class="divider"></div>
+                <span>05 Models</span>
+            </div>
+        </div>
+
+        <div class="card" data-category="american">
+            <img src="images/brands/dodge.png" alt="brand-logo" class="car-logo">
+            <h2>Dodge</h2>
+            <hr>
+            <div class="card-info">
+                <div class="info-left">
+                    <img src="images/flags/usa.png" alt="m-country" class="flag">
+                    <span>USA</span>
+                </div>
+                <div class="divider"></div>
+                <span>04 Models</span>
+            </div>
+        </div>
+
+  
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-sm">
+                Follow US
+            </div>
+            <div class="social-icons">
+                <ul class>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>    
+            <hr>
+            <div class="footer-copyright">
+                <p>Copyright © 2024 ・ SpareXpress ・ All rights reserved ・ <span><a href="https://www.thish.site/"><i class="fas fa-code"></i> by Thish.</a></span></p>
+            </div>            
+        </div>
+    </footer>
+
+
+    <!-- Booting logo script -->
+<script>
+    window.addEventListener("load", function() {
+      document.body.classList.add("loading");
+    
+      setTimeout(function() {
+        const bootingLogo = document.getElementById("bootingLogo");
+    
+        bootingLogo.style.opacity = 0; 
+    
+        setTimeout(function() {
+          bootingLogo.style.display = "none";
+          document.body.classList.remove("loading");
+        }, 1000); 
+      }, 500); 
+    });
+</script>
+        
+<script src="script.js"></script>
+    
+    
+</body>
+</html>

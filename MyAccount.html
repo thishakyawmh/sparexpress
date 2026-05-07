@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpareXpress - Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+  <div id="bootingLogo">
+    <img src="images/redcar.gif" alt="Loading..." />
+  </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Find-Part.html">Search</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact Us.html">Contact</a></li>
+      </ul>
+        <div class="nav-button">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+        </div>   
+    </nav>
+
+
+    <div class="SXcontainer">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+          <div class="front">
+            <img src="images/form-front.jpg" alt="">
+
+          </div>
+          <div class="back">
+            <img class="backImg" src="images/form-back.jpg" alt="">
+
+          </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+              <div class="login-form">
+                <div class="title">Login</div>
+                <form action="#">
+                  <div class="input-boxes">
+                    <div class="input-box">
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class=""><a href="#">Forgot password?</a></div>
+                    <div class="button input-box">
+                      <input type="submit" value="Login">
+                    </div>
+                    <div class="text sign-up-text">Or Login with </div>
+                    <div class="login-buttons">
+                      <a href="https://www.google.com/" target="_blank" aria-label="Log in with Google">
+                          <img src="images/icons/social/icons8-google.svg" alt="Google Icon">
+                      </a>
+                      <a href="https://www.facebook.com/" target="_blank" aria-label="Log in with Facebook">
+                          <img src="images/icons/social/icons8-facebook.svg" alt="Facebook Icon">
+                      </a>
+                      <a href="https://www.linkedin.com/" target="_blank" aria-label="Log in with linkedin">
+                          <img src="images/icons/social/icons8-linkedin.svg" alt="linkedin-icon">
+                      </a>
+                      <a href="https://www.microsoft.com/" target="_blank" aria-label="Log in with Microsoft">
+                          <img src="images/icons/social/icons8-microsoft.svg" alt="Microsoft Icon">
+                      </a>
+                    </div>
+                    <hr>
+
+                    <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
+
+
+                  </div>
+                </form>
+              </div>
+              <div class="signup-form">
+                <div class="title">Signup</div>
+                <form action="#">
+                  <div class="input-boxes">
+                    <div class="input-box">
+                      <i class="fas fa-user"></i>
+                      <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                      <i class="fas fa-envelope"></i>
+                      <input type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="button input-box">
+                      <input type="submit" value="SignUp">
+                    </div>
+                    <div class="text sign-up-text">Or SignUp with </div>
+                    <div class="login-buttons">
+                      <a href="https://www.google.com/" target="_blank" aria-label="Log in with Google">
+                          <img src="images/icons/social/icons8-google.svg" alt="Google Icon">
+                      </a>
+                      <a href="https://www.facebook.com/" target="_blank" aria-label="Log in with Facebook">
+                          <img src="images/icons/social/icons8-facebook.svg" alt="Facebook Icon">
+                      </a>
+                      <a href="https://www.linkedin.com/" target="_blank" aria-label="Log in with linkedin">
+                          <img src="images/icons/social/icons8-linkedin.svg" alt="linkedin-icon">
+                      </a>
+                      <a href="https://www.microsoft.com/" target="_blank" aria-label="Log in with Microsoft">
+                          <img src="images/icons/social/icons8-microsoft.svg" alt="Microsoft Icon">
+                      </a>
+                    </div>
+                    <hr>
+                    <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Booting logo script -->
+<script>
+  window.addEventListener("load", function() {
+    document.body.classList.add("loading");
+  
+    setTimeout(function() {
+      const bootingLogo = document.getElementById("bootingLogo");
+  
+      bootingLogo.style.opacity = 0; 
+  
+      setTimeout(function() {
+        bootingLogo.style.display = "none";
+        document.body.classList.remove("loading");
+      }, 1000); 
+    }, 500); 
+  });
+  </script>
+      
+  <script src="script.js"></script>
+
+</body>
+</html>
